@@ -75,7 +75,8 @@ app.post("/generate-payment", (req, res) => {
     );
 
     // Construire l’URL du widget (stage pour test)
-    const paymentUrl = `https://stage-payment-widget.futurapay.com/widget/deposit?${encryptedData}`;
+   const paymentUrl = `https://payment-widget.futurapay.com/widget/deposit?${encryptedData}`;
+
 
     res.json({ url: paymentUrl });
   } catch (err) {
